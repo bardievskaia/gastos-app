@@ -1,0 +1,33 @@
+<h2>Lista de Gastos</h2>
+
+<app-filtros (filtrosAplicados)="aplicarFiltros($event)"></app-filtros>
+
+<div>
+  <label>Ordenar por:</label>
+  <button (click)="cambiarOrden('fecha')">Fecha</button>
+  <button (click)="cambiarOrden('importe')">Importe</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Categoría</th>
+      <th>Importe</th>
+      <th>Fecha</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let gasto of gastos">
+      <td>{{ gasto.descripcion }}</td>
+      <td>{{ gasto.categoria }}</td>
+      <td>€{{ gasto.importe | number:'1.2-2' }}</td>
+      <td>{{ gasto.fecha | date:'shortDate' }}</td>
+      <td>
+        <button (click)="eliminarGasto(gasto.id!)">🗑️</button>
+        <a [routerLink]="['/editar', gasto.id]">✏️</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

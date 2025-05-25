@@ -1,0 +1,17 @@
+<section class="estadisticas">
+  <h2>Estadísticas del Mes</h2>
+
+  <p><strong>Total del mes:</strong> €{{ totalMes | number: '1.2-2' }}</p>
+  <p><strong>Promedio diario:</strong> €{{ promedioDiario | number: '1.2-2' }}</p>
+
+  <div style="max-width: 400px; margin: auto;">
+    <canvas baseChart
+            [data]="chartData"
+            [labels]="chartLabels"
+            [type]="chartType"
+            [legend]="true"
+            [plugins]="[]"
+            [options]="{ responsive: true }">
+    </canvas>
+  </div>
+</section>

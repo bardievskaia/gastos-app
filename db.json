@@ -1,0 +1,8 @@
+{
+  "gastos": [
+    { "id": 1, "descripcion": "Supermercado", "categoria": "Alimentación", "importe": 300, "fecha": "2025-05-01" },
+    { "id": 2, "descripcion": "Bus", "categoria": "Transporte", "importe": 40, "fecha": "2025-05-02" },
+    {"id": 3, "decripcion": "Cumpleaños Ana", "categoria": "Ocio", "importe": 60, "fecha": "2025-05-23"},
+    {"id": 4, "decripcion": "Reparación coche", "categoria": "Otros", "importe": 200, "fecha": "2025-05-23"}
+  ]
+}

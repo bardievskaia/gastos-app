@@ -1,0 +1,28 @@
+<h3>Filtros</h3>
+<form [formGroup]="filtroForm" (ngSubmit)="aplicarFiltros()">
+  <div>
+    <label for="descripcion">Descripción:</label>
+    <input id="descripcion" type="text" formControlName="descripcion" />
+  </div>
+
+  <div>
+    <label for="categoria">Categoría:</label>
+    <select id="categoria" formControlName="categoria">
+      <option value="">Todas</option>
+      <option *ngFor="let cat of categorias" [value]="cat">{{ cat }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="fechaInicio">Desde:</label>
+    <input id="fechaInicio" type="date" formControlName="fechaInicio" />
+  </div>
+
+  <div>
+    <label for="fechaFin">Hasta:</label>
+    <input id="fechaFin" type="date" formControlName="fechaFin" />
+  </div>
+
+  <button type="submit">Aplicar</button>
+  <button type="button" (click)="limpiarFiltros()">Limpiar</button>
+</form>
