@@ -1,10 +1,10 @@
-# 📊 GastosApp — Aplicación de Gestión de Gastos Personales
+# GastosApp — Aplicación de Gestión de Gastos Personales
 
 Esta aplicación permite registrar, visualizar, filtrar y analizar tus gastos personales. Desarrollada con **Angular 16+**, usa **JSON Server** como backend simulado y soporta **renderizado del lado del servidor (SSR)** con **Angular Universal**.
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Crear y editar gastos
 - Filtros por descripción, categoría y fecha
